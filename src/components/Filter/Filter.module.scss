@@ -1,0 +1,85 @@
+
+.filter-box{
+    width: 30%;
+    
+}
+
+.filter{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #DFE5EC;
+    border-radius: 8px;
+    height: 252px;
+    
+}
+
+.title-filter{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 12px;
+    font-size: 12px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+.input-box{
+    margin-left: 20px;
+}
+.checkbox{
+    width: 95.5%;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 13px;
+    height: 30px;
+    margin-left: 9px;
+}
+.checkbox:hover{
+    border-color: #2196F3;
+    background-color: #F1FCFF;
+}
+input::before{
+    background-color: #2196F3;
+}
+
+
+
+@media screen and (min-width: 500px) and (max-width: 767px){
+    .filter-box{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .filter{
+        height: auto;
+    }
+    .title-filter{
+        text-align: center;
+        vertical-align: center;
+    }
+    .checkbox{
+        width: 30%;
+        line-height: 12px;
+    }
+    .input-box{
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 340px) and (max-width: 499px){
+    .filter-box{
+        width: 70%;
+        margin: 0 auto;
+        height: auto;
+    }
+    .filter{
+        height: auto;
+    }
+    .title-filter{
+        font-size: 10px;
+        text-align: center;
+        vertical-align: center;
+    }
+    .checkbox{
+        height: 10px;
+    }
+}

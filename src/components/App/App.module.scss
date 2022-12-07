@@ -1,0 +1,36 @@
+.wrapper{
+    width: 1020px;
+    margin: 0 auto;
+    background-color: #F1FCFF;
+    height: 190vh;
+    padding-top: 45px;
+}
+
+.app{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.logo-box{
+    width: 100px;
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width: 340px) and (max-width: 767px) {
+    .app{
+        width: 95%;
+    }
+    .wrapper{
+        width: 100%;
+        height: 250vh;
+        padding-top: 10px;
+    }
+    .app{
+        display: block;
+        margin-top: 0;
+    }
+}

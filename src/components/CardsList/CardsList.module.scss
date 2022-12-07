@@ -1,0 +1,99 @@
+
+
+.avia-cards{
+    width: 70%;
+    background-color: #F1FCFF;
+    margin-left: 20px;
+}
+
+.show{
+    background-color: #2196F3;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #2196F3;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+.cards-list{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.card{
+    border: 1px  solid #DFE5EC;
+    background-color: #fff;
+    border-radius: 8px;
+    height: 184px;
+    width: 100%;
+    margin-top: 20px;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 0 20px;
+    color: #2196F3;
+    font-size: 24px;
+    line-height: 15px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+.avia-info{
+    margin: 10px 70px 20px 20px;
+}
+.segments1{
+    display: flex;
+    justify-content: space-between;
+}
+.segments2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.icon-company{
+    margin-right: 20px;
+    margin-top: 7px;
+    width: 110px;
+    height: 36px;
+    display: block;
+}
+
+.title-desc{
+    color: #A0B0B9;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+.desc-info{
+    font-size: 14px;
+    line-height: 21px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+@media screen and (min-width: 340px) and (max-width: 767px){
+    .avia-cards{
+        margin-left: 0;
+        margin-top: 20px;
+        margin: 0 auto;
+    }
+    .avia-info{
+        width: 88%;
+    }
+    .price{
+        font-size: 20px;
+    }
+    .desc-info{
+        font-size: 12px;
+    }
+    .title-desc{
+        font-size: 10px;
+    }
+}
