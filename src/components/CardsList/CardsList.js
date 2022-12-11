@@ -1,19 +1,16 @@
 import React from 'react';
-import classes from'./CardsList.module.scss';
+
 import Tabs from '../Tabs';
 
+import classes from './CardsList.module.scss';
 
-
-
-
-export default function CardsList({arr}){
-  const tickets = arr.map(({price, carrier}) => {
+export default function CardsList({ arr }) {
+  const tickets = arr.map(({ price, carrier }) => {
     return (
-      <div className={classes.card}>
-
+      <div className={classes.card} key={price}>
         <div className={classes.price}>
           <p>{`${price} Р`}</p>
-          <img className={classes['icon-company']} src={`https://pics.avs.io/99/36/${carrier}.png`} alt='logo'></img>
+          <img className={classes['icon-company']} src={`https://pics.avs.io/99/36/${carrier}.png`} alt="logo" />
         </div>
 
         <div className={classes['avia-info']}>
@@ -32,7 +29,6 @@ export default function CardsList({arr}){
               <div className={classes['title-desc']}>2 ПЕРЕСАДКИ</div>
               <div className={classes['desc-info']}>HKG, JNB</div>
             </div>
-
           </div>
 
           <div className={classes.segments2}>
@@ -53,15 +49,13 @@ export default function CardsList({arr}){
           </div>
         </div>
       </div>
-    )
-  })
-    return (
-      <div className={classes['avia-cards']}>
-        <Tabs/>
-        <div className={classes['cards-list']}>
-          {tickets}
-        </div>
-        <button className={classes.show}>ПОКАЗАТЬ ЕЩЕ 5 БИЛЕТОВ!</button>
-      </div>
-    )
-  }
+    );
+  });
+  return (
+    <div className={classes['avia-cards']}>
+      <Tabs />
+      <div className={classes['cards-list']}>{tickets}</div>
+      <button className={classes.show}>ПОКАЗАТЬ ЕЩЕ 5 БИЛЕТОВ!</button>
+    </div>
+  );
+}
