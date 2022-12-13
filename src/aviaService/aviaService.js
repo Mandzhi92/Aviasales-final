@@ -1,7 +1,4 @@
-import { Component } from 'react';
-
-export default class aviaServise extends Component {
-  // _ID = '2f3775210efede9cc52c028d6f834602';
+export default class AviaService {
   _URL = 'https://aviasales-test-api.kata.academy/';
 
   async getSearchId() {
@@ -17,7 +14,7 @@ export default class aviaServise extends Component {
     try {
       res = await fetch(`${this._URL}tickets?searchId=${id}`);
       if (res.status === 500) {
-        throw new Error('500');
+        throw new Error('500', 'Ошибка на сервере!');
       }
     } catch (e) {
       if (e.message === '500') {

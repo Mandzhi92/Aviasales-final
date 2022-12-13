@@ -1,68 +1,32 @@
-
-.filter-box{
-    width: 30%;
-    
+.container {
+    background-color: #FFFFFF;
+    width: 232px;
+    height: 272px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 0px rgba(34, 60, 80, 0.2);
+    padding-top: 20px;
+    @media (max-width: 815px) {
+        width: 100%;
+        margin-bottom: 20px;
+        height: auto;
+    }
 }
 
-.filter{
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border: 1px solid #DFE5EC;
-    border-radius: 8px;
-    height: 252px;
-    
-}
-
-.title-filter{
+.title {
     margin-left: 20px;
     margin-bottom: 10px;
     font-weight: 600;
     line-height: 12px;
     font-size: 12px;
-    font-family: 'Open Sans';
-    font-weight: 600;
-}
-
-
-
-
-@media screen and (min-width: 500px) and (max-width: 767px){
-    .filter-box{
-        width: 70%;
-        margin: 0 auto;
-    }
-    .filter{
-        height: auto;
-    }
-    .title-filter{
+    @media (max-width: 815px) {
         text-align: center;
-        vertical-align: center;
-    }
-    .checkbox{
-        width: 30%;
-        line-height: 12px;
-    }
-    .input-box{
-        margin-left: 0;
     }
 }
 
-@media screen and (min-width: 340px) and (max-width: 499px){
-    .filter-box{
-        width: 70%;
-        margin: 0 auto;
-        height: auto;
-    }
-    .filter{
-        height: auto;
-    }
-    .title-filter{
-        font-size: 10px;
-        text-align: center;
-        vertical-align: center;
-    }
-    .checkbox{
-        height: 10px;
-    }
+.list {
+    margin-bottom: 0;
+    @media (max-width: 815px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
 }

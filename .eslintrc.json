@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "ignorePatterns": ["node_modules", "dist", "build"],
   "extends": [
@@ -9,6 +10,7 @@
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "plugin:import/errors",
+    "plugin:import/typescript",
     "plugin:import/warnings"
   ],
   
@@ -60,8 +62,10 @@
     },
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"],
-        "moduleDirectory": ["node_modules", "src/"]
+        "alias": [
+        ["main/src", "./main/src"]
+       ],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   }

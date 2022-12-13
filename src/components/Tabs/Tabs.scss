@@ -1,0 +1,38 @@
+.Tabs {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    @media (max-width: 575px) {
+        margin-bottom: 120px;
+    }
+}
+
+.ant-radio-group {
+    @media (max-width: 575px) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}
+
+.ant-radio-button-wrapper {
+    @media (max-width: 575px) {
+        width: 100% !important;
+    }
+}
+
+.groupStyle { 
+    width: 100%;
+    border-radius: 8px; 
+}
+
+.btnStyle {
+  height: 50px;
+  width: 33.3%;
+  text-align: center;
+  padding-top: 12px;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}

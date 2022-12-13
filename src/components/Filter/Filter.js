@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-import CheckboxItem from '../CheckboxItem';
+import FilterItem from '../FilterItem';
 
 import classes from './Filter.module.scss';
 
-function Filter({ checked }) {
-  const [checkedList, setCheckedList] = useState({ ...checked });
-
-  useEffect(() => {
-    setCheckedList(checked);
-  }, [checked]);
-
+const Filter = ({ checked }) => {
   const filtersData = {
     all: 'Все',
     0: 'Без пересадок',
@@ -20,23 +15,26 @@ function Filter({ checked }) {
     3: '3 пересадки',
   };
 
+  const [checkedList, setCheckedList] = useState({ ...checked });
+
+  useEffect(() => {
+    setCheckedList(checked);
+  }, [checked]);
+
   const filterList = Object.entries(filtersData).map((item) => (
-    <CheckboxItem value={item[1]} amount={item[0]} checked={checkedList[item[0]]} key={item[0]} />
+    <FilterItem value={item[1]} amount={item[0]} checked={checkedList[item[0]]} key={item[0]} />
   ));
-
   return (
-    <aside className={classes['filter-box']}>
-      <div className={classes.filter}>
-        <h5 className={classes['title-filter']}>КОЛИЧЕСТВО ПЕРЕСАДОК</h5>
-        {filterList}
-      </div>
-    </aside>
+    <div className={classes.container}>
+      <div className={classes.title}>КОЛИЧЕСТВО ПЕРЕСАДОК</div>
+      <ul className={classes.list}>{filterList}</ul>
+    </div>
   );
-}
+};
 
-// Filter.defaultProps = { checked: {} }
+Filter.defaultProps = { checked: {} };
 
-// Filter.propTypes = { checked: PropTypes.shape({}) }
+Filter.propTypes = { checked: PropTypes.shape({}) };
 
 function mapStateToProps(store) {
   return { checked: store.filter.checked };

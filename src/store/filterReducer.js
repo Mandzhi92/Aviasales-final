@@ -11,6 +11,7 @@ const initialState = {
 };
 
 const checkedAll = (list) =>
+  // eslint-disable-next-line implicit-arrow-linebreak
   Object.keys(list).reduce((acc, key) => {
     acc[key] = !list.all;
     return acc;
